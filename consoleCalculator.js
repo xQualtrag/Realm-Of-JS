@@ -8,6 +8,18 @@ let storeNumber = [];
 let arrLength = parseInt(prompt("How many items do you want to add to the array?"));
 //Now use a prompt() function to ask the user for a number
 //Make sure to parseInt()
-let number = parseInt(prompt("Please enter a number: "));
-//After that we should code something that will ask us for the next number
+let number1st = parseInt(prompt("[1] Please enter a number: "));
+storeNumber.push(number1st);
 
+//After that we should code something that will ask us for the next number
+for (i = 0; i < arrLength-1; i++) {
+  let number2ndLooper = parseInt(prompt(`[${[i+2]}] Please enter another number: `));
+  storeNumber.push(number2ndLooper);
+}
+//Making a function to add all numbers
+function arrAdd(total,num)
+  {
+    return total+num
+  }
+//calling the function
+console.log(storeNumber.reduce(arrAdd))
