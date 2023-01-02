@@ -1,5 +1,10 @@
 //Calculator Using Reduce() method
-
+console.log('Please select a menu:');
+console.log('1.Calculator V1')
+console.log('2.Calculator V2')
+let menuSel = prompt('Answer:[1 or 2]');
+console.log(`Selected ${menuSel}`);
+if (menuSel === '1') {
 //First of all create an empty array
 let storeNumber = [];
 //Now use a prompt() function to ask the user for a number
@@ -16,10 +21,40 @@ for (i = 0; i < arrLength-1; i++) {
   let number2ndLooper = parseInt(prompt(`[${[i+2]}] Please enter another number: `));
   storeNumber.push(number2ndLooper);
 }
-//Making a function to add all numbers
+//Making functions to use them 
 function arrAdd(total,num)
   {
     return total+num
   }
-//calling the function
-console.log(storeNumber.reduce(arrAdd))
+function arrSub(total,num)
+  {
+    return total-num
+  }
+function arrMulti(total,num)
+  {
+    return total*num
+  }
+function arrDvd(total,num)
+  {
+    return total/num
+  }
+//calling the specific function
+  console.log('Please select an operator: ')
+  //Not finished yet
+  
+console.log(storeNumber.reduce())
+
+}
+
+if (menuSel === '2') {
+  console.log('Sorry.Thats under development')
+}
+else{
+  for(let i=0;i!== 1 || i!== 2;i++){
+  console.log('Sorry.You have selected an invalid option')
+  console.log('Please select a menu:');
+console.log('1.Calculator V1')
+console.log('2.Calculator V2')
+let menuSel = prompt('Answer:[1 or 2]');
+  }
+}
