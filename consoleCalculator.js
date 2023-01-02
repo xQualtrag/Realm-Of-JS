@@ -1,6 +1,6 @@
 console.log('Please select a menu:');
 console.log('1.Calculator V1')
-console.log('2.Calculator V2 [With More feature]')
+console.log('2.Calculator V2 [With More feature][Not Coming Soon!!]')
 var menuSel = parseInt(prompt('Answer:[1 or 2]'));
 function arrAdd(total,num)
   {
@@ -92,3 +92,32 @@ console.log('Select an option:')
 if (optionSel === 1) {
   console.log(`Overview the Item as an Array: [${storeNumber}]`);
 }
+if (optionSel === 2) {
+  console.log(`Editing a value in the array: `);
+  console.log(`Current Array: ${storeNumber}`);
+  let editValue = parseInt(prompt('Please enter the position of that value: '));
+  var searchValue = storeNumber[editValue-1]
+  console.log('searched value:'+ searchValue)
+  console.log('Convert the value into: ')
+  let convertValue = parseInt(prompt('Please enter the new value: '));
+  storeNumber [editValue-1] = convertValue
+  console.log(`New Array: ${storeNumber}`);
+}
+if (optionSel === 3) {
+  console.log(`Adding a value to the array: `);
+  console.log(`Current Array: ${storeNumber}`);
+  let addValue = parseInt(prompt('Please enter the value to add: '));
+  storeNumber.push(addValue);
+  console.log(`New Array: ${storeNumber}`);
+}
+if (optionSel === 4) {
+  console.log(`Removing a value from the array: `);
+  console.log(`Current Array: ${storeNumber}`);
+  let removeValue = parseInt(prompt('Please enter the position of that value'));
+  storeNumber.splice(removeValue-1, 1);
+  console.log(`New Array: ${storeNumber}`);
+}
+  if (optionSel === 5) {
+    console.log('Program Exiting....');
+    console.log('Thanks for using the calculator');  
+  }
